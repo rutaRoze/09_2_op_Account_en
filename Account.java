@@ -6,16 +6,16 @@ public class Account {
     private int id;
     private double balance;
     private double annualInterestRate = 0;
-    private Date dateCreated = new Date();
+    private Date dateCreated;
 
     public Account() {
-        id = 0;
-        balance = 0;
+        this(0, 0);
     }
 
     public Account(int id, double initialBalance) {
         this.id = id;
         this.balance = initialBalance;
+        this.dateCreated = new Date();
     }
 
     public int getId() {

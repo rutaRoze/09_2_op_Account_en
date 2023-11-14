@@ -7,12 +7,11 @@ public class AccountWithTransactions {
     private int id;
     private double balance;
     private double annualInterestRate = 0;
-    private Date dateCreated = new Date();
+    private Date dateCreated;
     private ArrayList<Transaction> transactions;
 
     public AccountWithTransactions() {
-        id = 0;
-        balance = 0;
+        this(0, 0);
     }
 
     public AccountWithTransactions(int id, double initialBalance) {
@@ -24,6 +23,7 @@ public class AccountWithTransactions {
         this.customerName = customerName;
         this.id = id;
         this.balance = initialBalance;
+        this.dateCreated = new Date();
         this.transactions = new ArrayList<>();
     }
 
